@@ -32,7 +32,7 @@ void MainWidget::onButtonReleased()
 
    // Set up our process to write to stdout and run our command
    process_.setCurrentWriteChannel(QProcess::StandardOutput); // Set the write channel
-   process_.start("ls -alh $HOME/");                          // Start a terminal command
+   process_.start("ls");                          // Start a terminal command
 }
 
 // This is called whenever the QProcess::readyReadStandardOutput() signal is received
