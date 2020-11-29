@@ -63,11 +63,11 @@ CToDoList::CToDoList()
     addToolBar(pToolBar);
 
     m_pActAdd = new QAction(this);
-    m_pActAdd->setIcon(QIcon(":/resources/add.png"));
+    m_pActAdd->setText("Add");
     connect(m_pActAdd, &QAction::triggered, this, &CToDoList::onAdd);
 
     m_pActRemove = new QAction(this);
-    m_pActRemove->setIcon(QIcon(":/resources/remove.png"));
+    m_pActRemove->setText("Remove");
     connect(m_pActRemove, &QAction::triggered, this, &CToDoList::onRemove);
 
     pToolBar->addAction(m_pActAdd);
@@ -77,8 +77,7 @@ CToDoList::CToDoList()
 void CToDoList::onAdd()
 {
     m_pwPending->model()->insertRow(m_pwPending->model()->rowCount());
-    QModelIndex oIndex = m_pwPending->model()->index(
-        m_pwPending->model()->rowCount() - 1, 0);
+    QModelIndex oIndex = m_pwPending->model()->index(m_pwPending->model()->rowCount() - 1, 0);
 
     m_pwPending->edit(oIndex);
 }
