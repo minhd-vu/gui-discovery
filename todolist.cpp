@@ -49,14 +49,12 @@ CToDoList::CToDoList()
     m_pwPending->setModel(new QStringListModel());
     m_pwCompleted->setModel(new QStringListModel());
 
-    m_pwPending->setStyleSheet("QListView { font-size: 20pt; font-weight: bold; }"
-                               "QListView::item { background-color: #E74C3C; padding: 10%;"
-                               "border: 1px solid #C0392B; }"
+    m_pwPending->setStyleSheet("QListView { font-size: 12pt; }"
+                               "QListView::item { background-color: #E74C3C; padding: 10%; border: 1px solid #C0392B; }"
                                "QListView::item::hover { background-color: #C0392B }");
 
-    m_pwCompleted->setStyleSheet("QListView { font-size: 20pt; font-weight: bold; }"
-                                 "QListView::item { background-color: #2ECC71; padding: 10%;"
-                                 "border: 1px solid #27AE60; }"
+    m_pwCompleted->setStyleSheet("QListView { font-size: 12pt; }"
+                                 "QListView::item { background-color: #2ECC71; padding: 10%; border: 1px solid #27AE60; }"
                                  "QListView::item::hover { background-color: #27AE60 }");
 
     QToolBar *pToolBar = new QToolBar(this);
