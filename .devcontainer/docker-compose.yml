@@ -14,7 +14,8 @@ services:
     # networks:
       # - host
     environment:
-      - DISPLAY=192.168.1.168:0.0
+      # Pass in the host ip address as an environment variable.
+      - DISPLAY=192.168.1.193:0.0
     volumes:
       # Forwards the local Docker socket to the container.
       - /var/run/docker.sock:/var/run/docker-host.sock 
